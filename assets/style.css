@@ -5,6 +5,8 @@
   --navy-deep: #141c2f;
   --green: #1e8f4c;
   --green-bright: #4ade80;
+  /* Bleu Windows (bouton de téléchargement) : contraste 5,3:1 avec le blanc. */
+  --blue: #0067c0;
   --bg: #ffffff;
   --bg-soft: #f4f6fa;
   --text: #172033;
@@ -187,27 +189,14 @@ summary:focus-visible {
   opacity: 0.85;
 }
 
-.btn-primary {
+.btn-mac {
   background: var(--green);
   color: #fff;
 }
 
-.btn-secondary {
-  background: transparent;
+.btn-windows {
+  background: var(--blue);
   color: #fff;
-  border-color: rgba(255, 255, 255, 0.55);
-}
-
-.btn.is-detected {
-  background: var(--green);
-  color: #fff;
-  border-color: transparent;
-}
-
-.btn.not-detected {
-  background: transparent;
-  color: #fff;
-  border-color: rgba(255, 255, 255, 0.55);
 }
 
 /* ── Accroche ────────────────────────────────────────────────────────────── */
@@ -494,6 +483,10 @@ section.soft {
   border-radius: 10px;
   text-decoration: none;
   font-weight: 700;
+}
+
+.dl-inline.dl-windows {
+  background: var(--blue);
 }
 
 .hash {

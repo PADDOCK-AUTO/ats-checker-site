@@ -29,7 +29,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png" />
     <link rel="icon" type="image/png" sizes="64x64" href="../assets/img/favicon-64.png" />
     <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png" />
-    <link rel="stylesheet" href="../assets/style.css" />
+    <link rel="stylesheet" href="../assets/style.css?v=2" />
   </head>
   <body>
     <a class="skip-link" href="#content">Skip to content</a>
@@ -68,16 +68,14 @@
           </ul>
           <div class="downloads">
             <a
-              class="btn btn-primary"
-              data-os="mac"
+              class="btn btn-mac"
               href="https://github.com/PADDOCK-AUTO/ats-checker-site/releases/latest/download/ATS-Checker-macOS-arm64.dmg"
             >
               Download for Mac
               <small>Apple silicon · macOS 13 or later · 279 MB</small>
             </a>
             <a
-              class="btn btn-secondary"
-              data-os="win"
+              class="btn btn-windows"
               href="https://github.com/PADDOCK-AUTO/ats-checker-site/releases/latest/download/ATS-Checker-Windows-x64-Setup.exe"
             >
               Download for Windows
@@ -289,7 +287,7 @@
               </p>
               <p class="requirements">Windows 10 or 11, 64-bit.</p>
               <a
-                class="dl-inline"
+                class="dl-inline dl-windows"
                 href="https://github.com/PADDOCK-AUTO/ats-checker-site/releases/latest/download/ATS-Checker-Windows-x64-Setup.exe"
                 >Download for Windows</a
               >
@@ -389,16 +387,5 @@
       </div>
     </footer>
 
-    <script>
-      // Highlights the button for the detected system (without JavaScript, both stay visible).
-      (function () {
-        var p = (navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || '';
-        var os = /mac/i.test(p) ? 'mac' : /win/i.test(p) ? 'win' : '';
-        if (!os) return;
-        document.querySelectorAll('.downloads [data-os]').forEach(function (a) {
-          a.classList.add(a.getAttribute('data-os') === os ? 'is-detected' : 'not-detected');
-        });
-      })();
-    </script>
   </body>
 </html>
