@@ -258,6 +258,23 @@ summary:focus-visible {
   color: #d6dcea;
 }
 
+/* Avertissement Windows sous les boutons, sur le fond sombre de l'accroche. */
+.win-note {
+  max-width: 760px;
+  margin: 18px 0 0;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: rgba(255, 200, 61, 0.12);
+  border: 1px solid rgba(255, 200, 61, 0.5);
+  color: #ffe7a8;
+  font-size: 15px;
+}
+
+.win-note strong,
+.win-note a {
+  color: #fff;
+}
+
 .hero-shot {
   margin: 56px auto 0;
   width: min(1040px, 100%);
@@ -487,6 +504,121 @@ section.soft {
 
 .dl-inline.dl-windows {
   background: var(--blue);
+}
+
+/* Windows : les deux écrans de SmartScreen (illustration en HTML, sans image). */
+.win-guide {
+  /* Lien « Voir les deux écrans » : le titre ne doit pas passer sous l'en-tête collé. */
+  scroll-margin-top: 84px;
+  margin-top: 28px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px 26px;
+}
+
+.win-guide h3 {
+  margin: 0 0 8px;
+}
+
+.win-guide p {
+  margin: 0 0 12px;
+}
+
+.win-guide > p code {
+  white-space: nowrap;
+}
+
+.smartscreen {
+  margin: 18px 0 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+@media (max-width: 760px) {
+  .smartscreen {
+    grid-template-columns: 1fr;
+  }
+}
+
+.smartscreen figcaption {
+  grid-column: 1 / -1;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.ss-step {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+}
+
+.ss-badge {
+  flex: none;
+  display: inline-grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #ffc83d;
+  color: #1b1b1b;
+  font-weight: 800;
+}
+
+.ss-dialog {
+  background: #0f5ea8;
+  color: #fff;
+  border-radius: 6px;
+  padding: 20px 22px 16px;
+  font-family:
+    'Segoe UI',
+    -apple-system,
+    BlinkMacSystemFont,
+    Roboto,
+    Arial,
+    sans-serif;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.win-guide .ss-dialog p {
+  margin: 0 0 12px;
+}
+
+.win-guide .ss-dialog .ss-title {
+  font-size: 22px;
+  font-weight: 300;
+  margin-bottom: 14px;
+}
+
+.ss-link span {
+  text-decoration: underline;
+}
+
+.ss-meta {
+  opacity: 0.95;
+}
+
+.ss-buttons {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.ss-btn {
+  border: 1px solid #fff;
+  padding: 5px 16px;
+  font-size: 14px;
+}
+
+.ss-target {
+  outline: 3px solid #ffc83d;
+  outline-offset: 3px;
+  border-radius: 2px;
 }
 
 .hash {
